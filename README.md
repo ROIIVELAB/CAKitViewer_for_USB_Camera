@@ -1,7 +1,10 @@
 # 개발 환경
-![image](https://github.com/ROIIVELAB/CAKitViewer-in-Linux_for-USB-Camera/assets/165998118/ab86ac52-4dbc-4323-a345-f369619706a3)
+![image](https://github.com/ROIIVELAB/CAKitViewer_for_USB_Camera_in_Linux/assets/165998118/b79bc790-be52-41ad-a47c-0ebe827cead2)
+
+
 
 
 
 # HW 구성
-![image](https://github.com/ROIIVELAB/CAKitViewer-in-Linux_for-USB-Camera/assets/165998118/7ba0306f-7fa2-4537-bc26-5e68fa8cdb9f)
+![image](https://github.com/ROIIVELAB/CAKitViewer_for_USB_Camera_in_Linux/assets/165998118/ad506abd-d912-41a9-9c24-6c5fac195324)
+

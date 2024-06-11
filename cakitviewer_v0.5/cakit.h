@@ -128,81 +128,30 @@ public:
     
     cakit_start.signal_clicked().connect( sigc::mem_fun(*this,
               &WindowMain::on_button_clicked_cakit_start) );
+
     cakit_end.signal_clicked().connect( sigc::mem_fun(*this,
               &WindowMain::on_button_clicked_cakit_end) );
+
     resize_check.signal_clicked().connect( sigc::mem_fun(*this,
-              &WindowMain::on_button_clicked_resize_check) );                        
+              &WindowMain::on_button_clicked_resize_check) );     
+
     save_image.signal_clicked().connect( sigc::mem_fun(*this,
               &WindowMain::on_button_clicked_save_image) );
+
     log_clear.signal_clicked().connect( sigc::mem_fun(*this,
               &WindowMain::on_button_clicked_log_clear) );
+
     select_folder.signal_clicked().connect( sigc::mem_fun(*this,
-              &WindowMain::on_button_clicked_select_folder) );                            
+              &WindowMain::on_button_clicked_select_folder) );           
+
     open_folder.signal_clicked().connect( sigc::mem_fun(*this,
               &WindowMain::on_button_clicked_open_folder) );
+
     select_ini.signal_clicked().connect( sigc::mem_fun(*this,
               &WindowMain::on_button_clicked_select_ini) );
+
     open_ini.signal_clicked().connect( sigc::mem_fun(*this,
-              &WindowMain::on_button_clicked_open_ini) );                        
-    
- /*   
- cakit_start.signal_button_release_event().connect([&](GdkEventButton*) {
-
-      bReturn = FALSE;
-      camera_index = index.get_text();
-
-      if(camera_index=="0"){
-          camera_index = "device=/dev/video0";
-      }
-      else if(camera_index =="1"){
-        camera_index = "device=/dev/video1";
-      }
-
-      camera_in();
-      
-      return true;
-    });
-
-    cakit_end.signal_button_release_event().connect([&](GdkEventButton*) {     
-
-      bReturn = TRUE;  
-      return true;
-    });
-
-    resize_check.signal_button_release_event().connect([&](GdkEventButton*) {
-      
-      resize_size();      
-      return true;
-    });
-    
-    save_image.signal_button_release_event().connect([&](GdkEventButton*) {
-          return true;
-        });
-
-
-    log_clear.signal_button_release_event().connect([&](GdkEventButton*) {
-          return true;
-        });
-
-
-    select_folder.signal_button_release_event().connect([&](GdkEventButton*) {
-          return true;
-        });
-
-
-    open_folder.signal_button_release_event().connect([&](GdkEventButton*) {
-          return true;
-        });
-
-    select_ini.signal_button_release_event().connect([&](GdkEventButton*) {
-          return true;
-        });
-
-
-    open_ini.signal_button_release_event().connect([&](GdkEventButton*) {
-          return true;
-        });
-*/
+              &WindowMain::on_button_clicked_open_ini) );                       
   }
 
 public :

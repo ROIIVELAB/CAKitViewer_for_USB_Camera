@@ -1,5 +1,50 @@
 #include "cakit.h"
 
+void WindowMain::on_button_clicked_cakit_start(){
+  bReturn = FALSE;
+      camera_index = index.get_text();
+
+      if(camera_index=="0"){
+          camera_index = "device=/dev/video0";
+      }
+      else if(camera_index =="1"){
+        camera_index = "device=/dev/video1";
+      }
+
+      camera_in();
+}
+
+void WindowMain::on_button_clicked_cakit_end(){
+  bReturn = TRUE;
+}
+
+void WindowMain::on_button_clicked_resize_check(){
+  resize_size();
+}
+
+void WindowMain::on_button_clicked_log_clear(){
+
+}
+
+void WindowMain::on_button_clicked_save_image(){
+
+}
+
+void WindowMain::on_button_clicked_select_folder(){
+
+}
+
+void WindowMain::on_button_clicked_open_folder(){
+
+}
+
+void WindowMain::on_button_clicked_select_ini(){
+
+}
+
+void WindowMain::on_button_clicked_open_ini(){
+
+}
 
 void WindowMain::camera_in(){
 
@@ -37,13 +82,15 @@ display_width, display_height, framerate, flip_method);
       
       namedWindow("USB Camera - GStreamer", WINDOW_AUTOSIZE);
 
-      while(true)
-      {
-        if (!cap.read(img)) {
+      while(true){
+
+       if (cap.grab()){
+        if (!cap.retrieve(img)) {
           cout<<"Capture read error"<<endl;
           break;
         }
-
+       }
+       
         if(bChecked==TRUE){
 
           cv::resize(img,resize_img,Size(width_output,height_output),0,0,INTER_LINEAR);

@@ -125,8 +125,28 @@ public:
 
 /////////////////////////////////////////////////////////////////////////////////////////////
 // 버튼 or 체크박스 클릭 시
-
-    cakit_start.signal_button_release_event().connect([&](GdkEventButton*) {
+    
+    cakit_start.signal_clicked().connect( sigc::mem_fun(*this,
+              &WindowMain::on_button_clicked_cakit_start) );
+    cakit_end.signal_clicked().connect( sigc::mem_fun(*this,
+              &WindowMain::on_button_clicked_cakit_end) );
+    resize_check.signal_clicked().connect( sigc::mem_fun(*this,
+              &WindowMain::on_button_clicked_resize_check) );                        
+    save_image.signal_clicked().connect( sigc::mem_fun(*this,
+              &WindowMain::on_button_clicked_save_image) );
+    log_clear.signal_clicked().connect( sigc::mem_fun(*this,
+              &WindowMain::on_button_clicked_log_clear) );
+    select_folder.signal_clicked().connect( sigc::mem_fun(*this,
+              &WindowMain::on_button_clicked_select_folder) );                            
+    open_folder.signal_clicked().connect( sigc::mem_fun(*this,
+              &WindowMain::on_button_clicked_open_folder) );
+    select_ini.signal_clicked().connect( sigc::mem_fun(*this,
+              &WindowMain::on_button_clicked_select_ini) );
+    open_ini.signal_clicked().connect( sigc::mem_fun(*this,
+              &WindowMain::on_button_clicked_open_ini) );                        
+    
+ /*   
+ cakit_start.signal_button_release_event().connect([&](GdkEventButton*) {
 
       bReturn = FALSE;
       camera_index = index.get_text();
@@ -182,7 +202,7 @@ public:
     open_ini.signal_button_release_event().connect([&](GdkEventButton*) {
           return true;
         });
-
+*/
   }
 
 public :
@@ -197,6 +217,15 @@ bool bReturn = 0;
 bool bChecked = 0;
 void camera_in();
 void resize_size();
+void on_button_clicked_cakit_start();
+void on_button_clicked_cakit_end();
+void on_button_clicked_resize_check();
+void on_button_clicked_log_clear();
+void on_button_clicked_save_image();
+void on_button_clicked_select_folder();
+void on_button_clicked_open_folder();
+void on_button_clicked_select_ini();
+void on_button_clicked_open_ini();
 
 private:
   Fixed fixed;

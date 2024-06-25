@@ -1,0 +1,14 @@
+{
+    "files.associations": {
+        "*.tcc": "cpp",
+        "deque": "cpp",
+        "list": "cpp",
+        "string": "cpp",
+        "vector": "cpp",
+        "valarray": "cpp",
+        "memory": "cpp",
+        "condition_variable": "cpp",
+        "ostream": "cpp",
+        "system_error": "cpp"
+    }
+}

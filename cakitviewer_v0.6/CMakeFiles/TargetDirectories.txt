@@ -1,0 +1,3 @@
+/home/roiive/cakitviewer_v0.6/CMakeFiles/rebuild_cache.dir
+/home/roiive/cakitviewer_v0.6/CMakeFiles/cakitviewer_v0.6.dir
+/home/roiive/cakitviewer_v0.6/CMakeFiles/edit_cache.dir
